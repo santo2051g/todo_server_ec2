@@ -7,6 +7,7 @@ dotenv.config()
 
 const PORT=process.env.PORT||5000
 const app=express();
+connectDb();
 
 app.use(express.json());
 app.use(cors());
@@ -15,5 +16,3 @@ app.use('/csbs',route);
  app.listen(PORT,()=>{
     console.log(`app is listening on port ${PORT}`);
  })
-
- connectDb();
